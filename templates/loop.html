@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #for{
+            background-color: orange;
+            color: black;
+        }
+        #loop{
+            background-color: black;
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <center id="for"> 
+        <h1>for loop</h1>
+        {% for i in name %}
+            {{i}}
+        {% endfor %}
+    </center>
+
+    <center id="loop"> 
+        <h1>for loop</h1>
+        {% for i in name %}
+            <h1>{{i}}</h1>
+        {% endfor %}
+    </center>
+</body>
+</html>

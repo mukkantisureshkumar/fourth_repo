@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #if{
+            background-image: linear-gradient(orange,white,green);
+        }
+        #if-else{
+            background-image: linear-gradient(red,blue,magenta);
+        }
+        #if-elif-else{
+            background-image: linear-gradient(rgb(181, 240, 20),purple,cyan);
+        }
+        #nested-if{
+            background-image: linear-gradient(rgb(14, 226, 49),rgb(221, 245, 11),rgb(83, 60, 17));
+        }
+    </style>
+</head>
+<body>
+    
+    <center id="if">
+        <h1>if condition</h1>
+        {% if a < b %}
+            <h2>inside if</h2>
+            <marquee behavior="alternate" direction="slide"><h2>a={{a}} is greater</h2></marquee>
+        {% endif %}
+    </center>
+    
+    <center id="if-else">
+        <h1>if - else</h1>
+        {% if a > b %}
+            <h2>inside if</h2>
+            <marquee behavior="alternate" direction="slide"><h2>a={{a}} is greater</h2></marquee>
+        {% else %}
+            <h2>inside else</h2>
+            <marquee behavior="alternate" direction="slide"><h2>b={{b}} is greater</h2></marquee>
+        {% endif %}
+    </center>
+    
+    <center id="if-elif-else">
+        <h1>if - elif - else</h1>
+        {% if a > b and a > c %}
+            <h2>inside if</h2>
+            <marquee behavior="alternate" direction="slide"><h2>a={{a}} is greater</h2></marquee>
+        {% elif b > c %}
+            <h2>inside elif</h2>
+            <marquee behavior="alternate" direction="slide"><h2>b={{b}} is greater</h2></marquee>
+        {% else %}
+            <h2>inside else</h2>
+            <marquee behavior="alternate" direction="slide"><h2>c={{c}} is greater</h2></marquee>
+        {% endif %}
+    </center>
+    
+    <center id="nested-if">
+        <h1>nested - if</h1>
+        {% if a > b %}
+            {% if a > c %}
+                <h2>inside if</h2>
+                <marquee behavior="alternate" direction="slide"><h2>a={{a}} is greater</h2></marquee>
+            {% else %}
+                <h2>inside else</h2>
+                <marquee behavior="alternate" direction="slide"><h2>c={{c}} is greater</h2></marquee>
+            {% endif %}
+        {% else %}
+            {% if b > c %}
+                <h2>inside if</h2>
+                <marquee behavior="alternate" direction="slide"><h2>b={{b}} is greater</h2></marquee>
+            {% else %}
+                <h2>inside else</h2>
+                <marquee behavior="alternate" direction="slide"><h2>c={{c}} is greater</h2></marquee>
+            {% endif %}
+        {% endif %}
+            
+    </center>
+</body>
+</html>
